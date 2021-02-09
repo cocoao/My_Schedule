@@ -20,4 +20,17 @@ header .headerWrap h1{font-size: 22px; font-weight: 400; padding: 10px 0; text-t
 .circle-graph-container{position: relative; display: flex; width: 100%; height: 100%;}
 .circle-graph{margin: 0 15px;position: relative;width: 100%;line-height: 1.2 !important;-webkit-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;display: flex;flex-direction: column;justify-content: center;align-items: center;font-family: 'Roboto', sans-serif;font-weight: 300;}
 canvas {position: absolute;}
-.totalTit{width:100%; height:auto; text-align: center; padding-bottom:20px; _text-transform: uppercase; _font-size: 16px; color: #333;}
+.circle-graph p{font-size: 26px; font-weight: 400; color: #4298ff;}
+.totalTit{width:100%; height:auto; text-align: center; padding-bottom:20px; text-transform: uppercase; font-size: 16px; font-weight:600; color: #333;}
+
+/* sub portfolio progress bar style */
+.subPfBar{padding: 10px; display: flex; align-items: center;}
+.subPfBar .pfImg{width:15%;font-size: 30px; display: flex; align-items: center; justify-content: center; color: #4298ff;}
+.subPfBar .pfContents{width:85%;}
+.subPfBar .pfContents h3{text-transform: uppercase; font-size: 14px; font-weight: 600;}
+.subPfBar .pfContents p{font-size: 12px; font-weight: 300; margin: 2px 0 5px;}
+.subPfBar .pfContents b{ font-size: 12px; font-weight: 500;}
+.subPfBar .pfBarBox{padding: 3px; _border: 1px solid #ccc; border-radius: 10px;width: 95%; background: #ddd;}
+.subPfBar .pfBarBox .pfBar{display: block; width: 0; height: 15px; background: #4298ff; border-radius: 10px;}
+
+footer{position: fixed; width: 100%; height: 50px; background: #4298ff; bottom: 0;}
