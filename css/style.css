@@ -30,7 +30,14 @@ canvas {position: absolute;}
 .subPfBar .pfContents h3{text-transform: uppercase; font-size: 14px; font-weight: 600;}
 .subPfBar .pfContents p{font-size: 12px; font-weight: 300; margin: 2px 0 5px;}
 .subPfBar .pfContents b{ font-size: 12px; font-weight: 500;}
+.subPfBar .pfContents .rateNum{ font-size: 12px; font-weight: 500; border:0; outline: 0; width: 25px; text-align: center;}
+.subPfBar .pfContents .rateNum:focus{_border: 1px solid #4298ff; color: #4298ff;}
 .subPfBar .pfBarBox{padding: 3px; _border: 1px solid #ccc; border-radius: 10px;width: 95%; background: #ddd;}
 .subPfBar .pfBarBox .pfBar{display: block; width: 0; height: 15px; background: #4298ff; border-radius: 10px;}
 
 footer{position: fixed; width: 100%; height: 50px; background: #4298ff; bottom: 0;}
+
+/* button box style */
+.btns{display: flex; align-items: center; justify-content: flex-end; padding: 10px;}
+.btns button{border: 1px solid #4298ff; background: #4298ff; font-weight: 400; font-family: 'Noto Sans KR'; padding: 10px 30px; color: #fff;}
+.btns button:nth-child(2){margin: 0 5px;}
