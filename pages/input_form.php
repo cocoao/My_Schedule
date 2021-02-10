@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scehdule Dashboard</title>
+  <title>Input Board</title>
 
   <!-- font awesome font link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,13 +41,14 @@
     <!-- container -->
     <div class="center">
       <form action="/my_schedule/php/update_rate.php" method="get" name="updateRate">
-        <div class="container">
+        <div class="inputContainer">
         <?php
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
+            <div class="item"></div>
             <div class="item btns">
               <button type="submit">진행률 수정</button>
-              <button type="button" onclick="javascript:location.href='/my_schedule/pages/input_form.php';">진행 상황 작성</button>
+              <button type="button">진행 상황 작성</button>
               <button type="button">진행 상황 확인</button>
             </div>
           </div><!-- end of cotainer -->
