@@ -39,10 +39,11 @@
 
     ?>
     <!-- container -->
-    <div class="center">
+    <div class="center gridWrap">
       <form action="/my_schedule/php/update_rate.php" method="get" name="updateRate">
         <div class="container">
         <?php
+          include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/latest_date.php';
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
             <div class="item btns">

@@ -12,7 +12,7 @@ $(function(){
       console.log(result);
       $(".circle-graph-container").append(
         `<div class="circle-graph easyPieChart" data-percent="${schAvg}">
-          <p>${schAvg}</p>
+          <p>${schAvg}%</p>
         </div>`
       )
     }

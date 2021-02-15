@@ -23,9 +23,9 @@
 <body>
   <!-- All contents are wrap inside wrap class -->
   <div class="wrap">
-  <?php
-  include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
-  ?>
+    <?php
+    include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
+    ?>
     <?php
     include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
     $sql="select * from schedule_progress";
@@ -39,24 +39,48 @@
 
     ?>
     <!-- container -->
-    <div class="center">
-      <form action="/my_schedule/php/update_rate.php" method="get" name="updateRate">
+    <div class="center gridWrap">
         <div class="inputContainer">
         <?php
+          include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/latest_date.php';
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
-            <div class="item"></div>
+            <div class="item inputBox">
+              <form action="/my_schedule/php/schedule_input.php" name="projectInput" method="post">
+                <select name="projectCate" id="" class="projectCate">
+                  <option value="dbproject">DB project</option>
+                  <option value="apiProject">API project</option>
+                  <option value="renewalProject">RENEWAR project</option>
+                  <option value="webProject">WEB PLANNING project</option>
+                </select>
+                <input type="text" name="projectTit" class="projectTit" placeholder="진행 상황을 작성해주세요.">
+                <textarea name="projectCon" id="" class="projectCon" placeholder="상세 진행 상황을 작성해주세요."></textarea>
+              </form>
+            </div>
             <div class="item btns">
-              <button type="submit">진행률 수정</button>
-              <button type="button">진행 상황 작성</button>
+              <button type="button" onclick="inputSubmit()">진행 상황 작성</button>
               <button type="button">진행 상황 확인</button>
             </div>
-          </div><!-- end of cotainer -->
-        </form>
-      </div><!-- end of center -->
+        </div><!-- end of cotainer -->
+    </div><!-- end of center -->
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
   </div><!-- end of wrap -->
+  <script>
+    function inputSubmit(){
+      if(!document.projectInput.projectTit.value){
+        alert('진행 상황을 작성해주세요.');
+        document.projectInput.projectTit.focus();
+        return;
+      }
+      if(!document.projectInput.projectCon.value){
+        alert('상세 진행 상황을 작성해주세요.');
+        document.projectInput.projectCon.focus();
+        return;
+      }
+      document.projectInput.submit();
+    }
+  </script>
 </body>
 </html>
