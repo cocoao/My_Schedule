@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scehdule Dashboard</title>
+  <title>Input Board</title>
 
   <!-- font awesome font link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,10 +22,10 @@
 </head>
 <body>
   <!-- All contents are wrap inside wrap class -->
-  <div class="wrap">
-  <?php
-  include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
-  ?>
+  <div class="wrap inputWrap">
+    <?php
+    include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
+    ?>
     <?php
     include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
     $sql="select * from schedule_progress";
@@ -40,23 +40,35 @@
     ?>
     <!-- container -->
     <div class="center gridWrap">
-      <form action="/my_schedule/php/update_rate.php" method="get" name="updateRate">
-        <div class="container">
+        <div class="inputContainer">
         <?php
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/latest_date.php';
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
+            <div class="item boardBox">
+            <?php
+            $include_path = $_GET['key'];
+
+            //echo $include_path;
+            include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/'.$include_path.'.php';
+
+            ?>
             <div class="item btns">
-              <button type="submit">진행률 수정</button>
               <button type="button" onclick="javascript:location.href='/my_schedule/pages/input_form.php'">진행 상황 작성</button>
-              <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>
-          </div><!-- end of cotainer -->
-        </form>
-      </div><!-- end of center -->
+        </div><!-- end of cotainer -->
+    </div><!-- end of center -->
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
   </div><!-- end of wrap -->
+  <script>
+    $('.boardList').hide();
+    $('.boardList').slice(0,5).show();
+
+    $('.loadMore button').click(function(){
+      $('.boardList:hidden').slice(0,5).show();
+    });
+  </script>
 </body>
 </html>

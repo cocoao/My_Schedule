@@ -18,12 +18,34 @@
 
   /* footer style */
   footer{position: relative;}
+
+  /* schedule board style */
+  .boardBox .boardTable span,.loadMore button,.categoryTabs a{font-size: 12px;}
+
+  /* detail view style */
+  .viewBox .viewTable span,.loadMore button,.categoryTabs a{font-size: 12px;}
+
 }
 
 @media screen and (max-width:600px){
   .inputBox .projectCate{width:100%; font-size: 12px;}
   .inputBox .projectTit{width:100%; font-size: 12px; margin: 5px 0 0 0;}
   .inputBox .projectCon{font-size: 12px; padding: 10px;}
+
+  /* schedule board style */
+  .boardBox .boardTable span.borNum{display: none;}
+  .boardBox .boardTable span.borCate{width: 25%;}
+  .boardBox .boardTable span.borTit{width: 55%;}
+  .boardBox .boardTable span.borReg{width: 20%;}
+
+  .categoryTabs{text-align: center;}
+
+  /* detail view style */
+  .viewBox .viewTable span.borNum{display: none;}
+  .viewBox .viewTable span.borCate{width: 25%;}
+  .viewBox .viewTable span.borCon{width: 55%;}
+  .viewBox .viewTable span.borReg{width: 20%;}
+  .detailTit h2{font-size: 14px;}
 }
 
 @media screen and (max-width:400px){
@@ -36,6 +58,17 @@
 
   .btns button{width: 33.33%;}
 
-    /* footer style */
-    footer{padding: 10px 15px;}
+  /* footer style */
+  footer{padding: 10px 15px;}
+
+  /* schedule board style */
+  .boardBox .boardTable span.borCate{width: 40%;}
+  .boardBox .boardTable span.borTit{width: 60%;}
+  .boardBox .boardTable span.borReg{display: none;}
+
+  /* detail view style */
+  .viewBox .viewTable span.borCate{width: 40%;}
+  .viewBox .viewTable span.borCon{width: 60%;}
+  .viewBox .viewTable span.borReg{display: none;}
+  
 }

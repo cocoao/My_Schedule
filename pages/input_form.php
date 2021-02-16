@@ -22,7 +22,7 @@
 </head>
 <body>
   <!-- All contents are wrap inside wrap class -->
-  <div class="wrap">
+  <div class="wrap inputWrap">
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
     ?>
@@ -48,10 +48,10 @@
             <div class="item inputBox">
               <form action="/my_schedule/php/schedule_input.php" name="projectInput" method="post">
                 <select name="projectCate" id="" class="projectCate">
-                  <option value="dbproject">DB project</option>
-                  <option value="apiProject">API project</option>
-                  <option value="renewalProject">RENEWAR project</option>
-                  <option value="webProject">WEB PLANNING project</option>
+                  <option value="DB project">DB project</option>
+                  <option value="API project">API project</option>
+                  <option value="RENEWAR project">RENEWAR project</option>
+                  <option value="WEB PLANNING project">WEB PLANNING project</option>
                 </select>
                 <input type="text" name="projectTit" class="projectTit" placeholder="진행 상황을 작성해주세요.">
                 <textarea name="projectCon" id="" class="projectCon" placeholder="상세 진행 상황을 작성해주세요."></textarea>
@@ -59,7 +59,7 @@
             </div>
             <div class="item btns">
               <button type="button" onclick="inputSubmit()">진행 상황 작성</button>
-              <button type="button">진행 상황 확인</button>
+              <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>
         </div><!-- end of cotainer -->
     </div><!-- end of center -->

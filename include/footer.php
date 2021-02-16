@@ -20,5 +20,9 @@
     for(let i=0; i<rateNum.length; i++){
       rateNum[i].readOnly=true;
     }
+  } else if(pathname.includes("sch_view")){
+    changeTit.innerText="Schedule Board";
+  } else if(pathname.includes("detail_view")){
+    changeTit.innerText="Detail Schedule";
   }
 </script>

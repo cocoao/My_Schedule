@@ -47,6 +47,7 @@ footer{width: 100%; height: auto; background: #4298ff; bottom: 0; padding: 12px 
 footer p{color: #fff; font-weight: 400; font-size: 12px;}
 
 /* input form page style */
+.inputWrap{height: 100%;}
 .inputContainer{width: 100%; height: auto; display: grid; grid-template-columns:1fr 1fr;
   grid-template-rows:repeat(5, minmax(100px, auto)); gap:10px;  padding: 20px 0;}
 .inputContainer .item{background:#fff;}
@@ -59,3 +60,43 @@ footer p{color: #fff; font-weight: 400; font-size: 12px;}
 .inputBox .projectTit{width: calc(70% - 5px); height: 40px; border: 1px solid #ddd; padding: 5px 10px;margin-left: 5px;font-family: 'Noto Sans KR';display: block; float: left;}
 .inputBox .projectCon{width: 100%; height: 150px; border: 1px solid #ddd; resize: none; padding: 15px; margin-top: 5px;font-family: 'Noto Sans KR';display: block; float: left;}
 .inputBox .projectTit:focus,.inputBox .projectCon:focus{border: 1px solid #4298ff;}
+
+/* schedule board style */
+.boardBox{padding: 10px;}
+.boardBox .boardTable{width: 100%; height: auto; border-bottom: 1px solid #4298ff;}
+.boardBox .boardTable li:nth-child(odd){background: #eee;}
+.boardBox .boardTable .boardTit,
+.boardBox .boardTable .boardList{width: 100%; height: auto; display: flex; align-items: center; justify-content: center;}
+.boardBox .boardTable li.boardTit{background: #4298ff;}
+.boardBox .boardTable span{font-family: 'Noto Sans KR'; padding: 8px 0; text-align: center; color: #333 ;}
+.boardBox .boardTable .boardTit span{color: #fff;}
+
+.boardBox .boardTable span.borNum{width: 10%;}
+.boardBox .boardTable span.borCate{width: 20%;}
+.boardBox .boardTable span.borTit{width: 50%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.boardBox .boardTable span.borReg{width: 20%;}
+
+.loadMore{width: 100%; height: auto; margin-top: 10px; text-align: center;}
+.loadMore button{outline: 0; border: 1px solid #4298ff; color: #fff; background: #4298ff; padding: 5px 30px; font-family: 'Noto Sans KR';}
+
+.categoryTabs{width: 100%; height: auto;font-weight: 300;}
+.categoryTabs a{display: inline-block; border: 1px solid #4298ff; background: #4298ff; color: #fff; padding: 5px 15px; margin-bottom: 5px; }
+.categoryTabs a.active{background: #fff; color: #4298ff;}
+
+/* deatil view style */
+.viewBox{padding: 10px;}
+.viewBox .viewTable{width: 100%; height: auto; border-bottom: 1px solid #4298ff;}
+.viewBox .viewTable .viewTit,
+.viewBox .viewTable .viewList{width: 100%; height: auto; display: flex; align-items: center; justify-content: center;}
+.viewBox .viewTable li.viewTit{background: #4298ff;}
+.viewBox .viewTable span{font-family: 'Noto Sans KR'; padding: 8px 0; text-align: center; color: #333 ;}
+.viewBox .viewTable .viewTit span{color: #fff;}
+
+.viewBox .viewTable span.borNum{width: 10%;}
+.viewBox .viewTable span.borCate{width: 20%;}
+.viewBox .viewTable span.borCon{width: 50%; _overflow: hidden; _white-space: nowrap; _text-overflow: ellipsis;}
+.viewBox .viewTable .viewList span.borCon{text-align: left;}
+.viewBox .viewTable span.borCon em{font-style: normal; line-height: 2;}
+.viewBox .viewTable span.borReg{width: 20%;}
+.detailTit{width: 100%; height: auto; padding-left: 20px; border-left: 2px solid #4298ff; margin-bottom: 10px;}
+.detailTit h2{font-size: 16px; font-weight: 400; color: #333; font-family: 'Noto Sans KR';}
