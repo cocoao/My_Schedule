@@ -59,8 +59,10 @@
           $board_con=$board_row['sch_txt_con'];
         ?>
             <div class="item viewBox">
+              <form action="/my_schedule/php/detail_update.php?num=<?=$board_num?>" method="post">
               <div class="detailTit">
                 <h2><?=$board_tit?></h2>
+                <input type="text" value="<?=$board_tit?>" class="hiddenTit" name="updateTit">
               </div>
               <ul class="viewTable">
                 <li class="viewTit">
@@ -72,19 +74,27 @@
                 <li class="viewList">
                   <span class="borNum"><?=$board_num?></span>
                   <span class="borCate"><?=$board_cate?></span>
-                  <span class="borCon"><em><?=$board_con?></em></span>
+                  <span class="borCon">
+                    <em><?=$board_con?></em>
+                    <textarea class="hiddenCon" value="<?=$board_con?>" name="updateCon"><?=$board_con?></textarea>
+                  </span>
+
                   <span class="borReg"><?=$board_reg?></span>
                 </li>
                 <?php
                 }
                 ?>
               </ul>
+              <div class="subBtn">
+                <button type=submit>수정 사항 입력</button></div>
+              </form>
             </div>
             <div class="item btns">
-              <button type="button">진행 상황 수정</button>
+              <button type="button" class="updateContBtn">진행 상황 수정</button>
               <button type="button" onclick="confirmDel()">진행 상황 삭제</button>
             <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>
+
         </div><!-- end of cotainer -->
     </div><!-- end of center -->
     <?php

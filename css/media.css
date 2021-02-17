@@ -1,5 +1,6 @@
 @media screen and (max-width:980px){
   .center{padding: 0 25px;}
+  .hiddenHeader{right: 25px;}
 }
 
 @media screen and (max-width:780px){
@@ -23,7 +24,7 @@
   .boardBox .boardTable span,.loadMore button,.categoryTabs a{font-size: 12px;}
 
   /* detail view style */
-  .viewBox .viewTable span,.loadMore button,.categoryTabs a{font-size: 12px;}
+  .viewBox .viewTable span,.loadMore button,.categoryTabs a,.subBtn button{font-size: 12px;}
 
 }
 
@@ -42,10 +43,15 @@
 
   /* detail view style */
   .viewBox .viewTable span.borNum{display: none;}
-  .viewBox .viewTable span.borCate{width: 25%;}
-  .viewBox .viewTable span.borCon{width: 55%;}
-  .viewBox .viewTable span.borReg{width: 20%;}
+  .viewBox .viewTable span.borCate{width: 30%;}
+  .viewBox .viewTable span.borCon{width: 70%;}
+  .viewBox .viewTable span.borReg{display: none;}
+  
   .detailTit h2{font-size: 14px;}
+
+  /* .hiddenTit{width: 50%;} */
+  .hiddenTit{width: 100%; font-size: 12px;}
+  .hiddenCon{width: 100%;font-size: 12px;}
 }
 
 @media screen and (max-width:400px){
@@ -67,8 +73,5 @@
   .boardBox .boardTable span.borReg{display: none;}
 
   /* detail view style */
-  .viewBox .viewTable span.borCate{width: 40%;}
-  .viewBox .viewTable span.borCon{width: 60%;}
-  .viewBox .viewTable span.borReg{display: none;}
-  
+
 }
