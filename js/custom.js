@@ -46,9 +46,9 @@ $(function(){
 //  });
 
 //  let closeWin = window.close();
- $(window).close(function(){
-  window.sessionStorage.removeSe('usercode'); 
- });
+//  $(window).close(function(){
+//   window.sessionStorage.removeSe('usercode'); 
+//  });
  
 
 });

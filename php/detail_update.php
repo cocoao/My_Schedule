@@ -13,7 +13,7 @@ mysqli_query($dbConn,$sql);
 echo"
 <script>
 alert('수정이 완료되었습니다.');
-history.go(-1);
+location.href='/my_schedule/pages/sch_view.php?key=view_all';
 </script>
 "
 ?>

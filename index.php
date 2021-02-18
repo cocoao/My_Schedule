@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <!-- //cache control 사용할 경우 페이지 로딩 속도가 늦어질 수 있다. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
   <title>Scehdule Dashboard</title>
 
   <!-- font awesome font link -->
@@ -47,7 +49,7 @@
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
             <div class="item btns">
-              <button type="submit">진행률 수정</button>
+              <button type="button" onclick="updateSubmit()">진행률 수정</button>
               <button type="button" onclick="javascript:location.href='/my_schedule/pages/input_form.php'">진행 상황 작성</button>
               <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>
@@ -58,5 +60,30 @@
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
   </div><!-- end of wrap -->
+  <script>
+  function updateSubmit(){
+    if(document.updateRate.sch_db_rate.value > 101){
+      alert("100이하의 숫자를 사용해주세요.");
+      document.updateRate.sch_db_rate.focus();
+      return;
+    }
+    if(document.updateRate.sch_api_rate.value > 101){
+      alert("100이하의 숫자를 사용해주세요.");
+      document.updateRate.sch_api_rate.focus();
+      return;
+    }
+    if(document.updateRate.sch_ren_rate.value > 101){
+      alert("100이하의 숫자를 사용해주세요.");
+      document.updateRate.sch_ren_rate.focus();
+      return;
+    }
+    if(document.updateRate.sch_pla_rate.value > 101){
+      alert("100이하의 숫자를 사용해주세요.");
+      document.updateRate.sch_pla_rate.focus();
+      return;
+    }
+    document.updateRate.submit();
+  }
+  </script>
 </body>
 </html>
