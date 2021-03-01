@@ -23,6 +23,7 @@
 <body>
   <!-- All contents are wrap inside wrap class -->
   <div class="wrap inputWrap">
+    <div class="pattern">
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
     ?>
@@ -36,6 +37,7 @@
     $sch_api=$sch_row['sch_api'];
     $sch_ren=$sch_row['sch_ren'];
     $sch_pla=$sch_row['sch_pla'];
+    $sch_port=$sch_row['sch_port'];
 
     ?>
     <!-- container -->
@@ -52,6 +54,7 @@
                   <option value="API project">API project</option>
                   <option value="RENEWAR project">RENEWAR project</option>
                   <option value="WEB PLANNING project">WEB PLANNING project</option>
+                  <option value="PORTFOLIO project">PORTFOLIO project</option>
                 </select>
                 <input type="text" name="projectTit" class="projectTit" placeholder="진행 상황을 작성해주세요.">
                 <textarea name="projectCon" id="" class="projectCon" placeholder="상세 진행 상황을 작성해주세요."></textarea>
@@ -66,6 +69,7 @@
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
+    </div>
   </div><!-- end of wrap -->
   <script>
     function inputSubmit(){

@@ -23,6 +23,7 @@
 <body>
   <!-- All contents are wrap inside wrap class -->
   <div class="wrap inputWrap">
+    <div class="pattern">
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
     ?>
@@ -38,6 +39,7 @@
     $sch_api=$sch_row['sch_api'];
     $sch_ren=$sch_row['sch_ren'];
     $sch_pla=$sch_row['sch_pla'];
+    $sch_port=$sch_row['sch_port'];
 
     ?>
     <!-- container -->
@@ -91,7 +93,7 @@
             </div>
             <div class="item btns">
               <button type="button" class="updateContBtn">진행 상황 수정</button>
-              <button type="button" onclick="confirmDel()">진행 상황 삭제</button>
+              <button type="button" onclick="confirmDel()" style="margin: 0 1.5%;">진행 상황 삭제</button>
             <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>
 
@@ -100,6 +102,7 @@
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
+    </div>
   </div><!-- end of wrap -->
   <script>
     function confirmDel(){

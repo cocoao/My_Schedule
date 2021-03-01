@@ -31,8 +31,6 @@
   $ren_last_date=$ren_date_row['sch_txt_reg'];
   }
 
-  
-
   // web project latest date
   $web_date_sql="select * from schedule_txt where sch_txt_cate='webProject' order by sch_txt_num desc limit 1";
   $web_date_result=mysqli_query($dbConn,$web_date_sql);
@@ -42,5 +40,16 @@
   $web_last_date="No data";
   } else {
   $web_last_date=$web_date_row['sch_txt_reg'];
+  }
+
+  // portfolio project latest date
+  $port_date_sql="select * from schedule_txt where sch_txt_cate='portfolioProject' order by sch_txt_num desc limit 1";
+  $port_date_result=mysqli_query($dbConn,$port_date_sql);
+  $port_date_row=mysqli_fetch_array($port_date_result);
+  
+  if(!$port_date_row){
+  $port_last_date="No data";
+  } else {
+  $port_last_date=$port_date_row['sch_txt_reg'];
   }
 ?>

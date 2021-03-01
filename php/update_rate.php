@@ -5,11 +5,12 @@
   $sch_api=$_REQUEST['sch_api_rate'];
   $sch_ren=$_REQUEST['sch_ren_rate'];
   $sch_pla=$_REQUEST['sch_pla_rate'];
+  $sch_port=$_REQUEST['sch_port_rate'];
 
   // echo $sch_db,$sch_api,$sch_ren,$sch_pla;
 
   include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
-  $sql = "update schedule_progress set sch_db=$sch_db,sch_api=$sch_api,sch_ren=$sch_ren,sch_pla=$sch_pla where sch_num=$sch_num";
+  $sql = "update schedule_progress set sch_db=$sch_db,sch_api=$sch_api,sch_ren=$sch_ren,sch_pla=$sch_pla,sch_port=$sch_port where sch_num=$sch_num";
   mysqli_query($dbConn,$sql);
 
   $sql = "select * from schedule_progress where sch_num=$sch_num";
@@ -20,7 +21,8 @@
       'db_rate' => $sch_row['sch_db'],
       'api_rate' => $sch_row['sch_api'],
       'ren_rate' => $sch_row['sch_ren'],
-      'pla_rate' => $sch_row['sch_pla']
+      'pla_rate' => $sch_row['sch_pla'],
+      'port_rate' => $sch_row['sch_port']
     ));
   }
 

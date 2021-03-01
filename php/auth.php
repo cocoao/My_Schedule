@@ -1,7 +1,13 @@
 <meta charset="UTF-8">
 <?php
 
-  $auth_code=$_REQUEST['authCode'];
+  $auth_code1=$_REQUEST['authCode1'];
+  $auth_code2=$_REQUEST['authCode2'];
+  $auth_code3=$_REQUEST['authCode3'];
+  $auth_code4=$_REQUEST['authCode4'];
+  $auth_code = $auth_code1.$auth_code2.$auth_code3.$auth_code4;
+  
+  // echo $auth_code;
   
   include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
   $sql="select * from schedule_admin where sch_ad_pass=$auth_code";

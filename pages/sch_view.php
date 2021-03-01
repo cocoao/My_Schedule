@@ -23,6 +23,7 @@
 <body>
   <!-- All contents are wrap inside wrap class -->
   <div class="wrap inputWrap">
+    <div class="pattern">
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/header.php';
     ?>
@@ -36,6 +37,7 @@
     $sch_api=$sch_row['sch_api'];
     $sch_ren=$sch_row['sch_ren'];
     $sch_pla=$sch_row['sch_pla'];
+    $sch_port=$sch_row['sch_port'];
 
     ?>
     <!-- container -->
@@ -61,6 +63,7 @@
     <?php
     include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/footer.php';
     ?>
+    </div>
   </div><!-- end of wrap -->
   <script>
     $('.boardList').hide();

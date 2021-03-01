@@ -4,9 +4,10 @@
     <a href="/my_schedule/pages/sch_view.php?key=view_api">API</a>
     <a href="/my_schedule/pages/sch_view.php?key=view_renewal">Renewal</a>
     <a href="/my_schedule/pages/sch_view.php?key=view_web">Web planning</a>
+    <a href="/my_schedule/pages/sch_view.php?key=view_port">Portfolio</a>
   </div>
   <ul class="boardTable">
-    <li class="boardTit">
+    <li class="boardTit" style="background:#fdc82e">
       <span class="borNum">번호</span>
       <span class="borCate">분류</span>
       <span class="borTit">제목</span>
@@ -14,7 +15,7 @@
     </li>
     <?php
     include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
-    $sql="select * from schedule_txt where sch_txt_cate='dbproject' order by sch_txt_num desc";
+    $sql="select * from schedule_txt where sch_txt_cate='DB project' order by sch_txt_num desc";
 
     $board_result=mysqli_query($dbConn,$sql);
     while($board_row=mysqli_fetch_array($board_result)){
@@ -34,6 +35,6 @@
     ?>
   </ul>
   <div class="loadMore">
-    <button type="button">더보기</button>
+    <button type="button" style="background:#fdc82e">더보기</button>
   </div>
 </div>
