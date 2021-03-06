@@ -1,9 +1,9 @@
 [
-  {
-      "db_rate": "93",
-      "api_rate": "50",
-      "ren_rate": "70",
-      "pla_rate": "5",
-      "port_rate": "0"
-  }
+    {
+        "db_rate": "95",
+        "api_rate": "60",
+        "ren_rate": "70",
+        "pla_rate": "10",
+        "port_rate": "5"
+    }
 ]

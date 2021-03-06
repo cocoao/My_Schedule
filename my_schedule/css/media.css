@@ -68,7 +68,8 @@
   .subPfBar .pfImg{font-size: 20px;}
   .subPfBar .pfContents p{margin: 0 0 5px;}
   .btns button{width: 33.33%;}
-
+  .circle-graph-container span.outline{width: 190px; height: 190px;}
+  .circle-graph-container span.inline{width: 90px; height: 90px;}
 
   /* footer style */
   footer{padding: 10px 15px;}
