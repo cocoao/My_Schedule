@@ -49,7 +49,7 @@
     <i class="fa fa-bar-chart-o"></i>
   </div>
   <div class="pfContents">
-    <h3>Web pranning Project</h3>
+    <h3>UI/UX Project</h3>
     <p>Progress Rate : <input type="text" value="<?=$sch_pla?>" class="rateNum" name="sch_pla_rate">%  |<em>  Last Update : <b><?=$web_last_date?></b></p></em>
     <div class="pfBarBox">
       <span class="pfBar"></span>

@@ -32,7 +32,7 @@
   }
 
   // web project latest date
-  $web_date_sql="select * from schedule_txt where sch_txt_cate='WEB PLANNING project' order by sch_txt_num desc limit 1";
+  $web_date_sql="select * from schedule_txt where sch_txt_cate='UI/UX project' order by sch_txt_num desc limit 1";
   $web_date_result=mysqli_query($dbConn,$web_date_sql);
   $web_date_row=mysqli_fetch_array($web_date_result);
   

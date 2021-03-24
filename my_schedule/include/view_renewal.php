@@ -3,7 +3,7 @@
   <a href="/my_schedule/pages/sch_view.php?key=view_db">Database</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_api">API</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_renewal" class="active">Renewal</a>
-  <a href="/my_schedule/pages/sch_view.php?key=view_web">Web planning</a>
+  <a href="/my_schedule/pages/sch_view.php?key=view_web">UI/UX</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_port">Portfolio</a>
 </div>
 <ul class="boardTable">

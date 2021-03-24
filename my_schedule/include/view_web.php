@@ -3,7 +3,7 @@
   <a href="/my_schedule/pages/sch_view.php?key=view_db">Database</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_api">API</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_renewal">Renewal</a>
-  <a href="/my_schedule/pages/sch_view.php?key=view_web" class="active">Web planning</a>
+  <a href="/my_schedule/pages/sch_view.php?key=view_web" class="active">UI/UX</a>
   <a href="/my_schedule/pages/sch_view.php?key=view_port">Portfolio</a>
 </div>
 <ul class="boardTable">
@@ -15,7 +15,7 @@
   </li>
   <?php
     include $_SERVER['DOCUMENT_ROOT']."/my_schedule/include/db_connect.php";
-    $sql="select * from schedule_txt where sch_txt_cate='WEB PLANNING project' order by sch_txt_num desc";
+    $sql="select * from schedule_txt where sch_txt_cate='UI/UX project' order by sch_txt_num desc";
 
     $board_result=mysqli_query($dbConn,$sql);
     while($board_row=mysqli_fetch_array($board_result)){

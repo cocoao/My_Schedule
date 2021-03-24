@@ -55,7 +55,7 @@
                 <option value="DB project">DB project</option>
                 <option value="API project">API project</option>
                 <option value="RENEWAL project">RENEWAL project</option>
-                <option value="WEB PLANNING project">WEB PLANNING project</option>
+                <option value="UI/UX project">UI/UX project</option>
                 <option value="PORTFOLIO project">PORTFOLIO project</option>
               </select>
               <input type="text" name="projectTit" class="projectTit" placeholder="진행 상황을 작성해주세요.">
