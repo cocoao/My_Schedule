@@ -8,8 +8,8 @@
   <title>Scehdule Dashboard</title>
 
   <!-- favicon link -->
-  <link rel="icon" href="/my_schedule/img/schedule_favicon.ico">
-  <link rel="apple-touch-icon" href="/my_schedule/img/schedule_favicon.ico">
+  <link rel="icon" href="/my_schedule/img/schedule_favicon.png">
+  <link rel="apple-touch-icon" href="/my_schedule/img/schedule_favicon.png">
 
   <!-- font awesome font link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,7 +54,7 @@
           include $_SERVER['DOCUMENT_ROOT'].'/my_schedule/include/grid_up.php';
           ?>
             <div class="item btns">
-              <button type="button" onclick="updateSubmit()">진행률 수정</button>
+              <button type="submit" onclick="updateSubmit()">진행률 수정</button>
               <button type="button" onclick="javascript:location.href='/my_schedule/pages/input_form.php'">진행 상황 작성</button>
               <button type="button" onclick="javascript:location.href='/my_schedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
             </div>

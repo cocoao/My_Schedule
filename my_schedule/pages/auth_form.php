@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Authorization</title>
-
   <!-- favicon link -->
-  <link rel="icon" href="/my_schedule/img/schedule_favicon.ico">
-  <link rel="apple-touch-icon" href="/my_schedule/img/schedule_favicon.ico">
-
+  <link rel="icon" href="/my_schedule/img/schedule_favicon.png">
+  <link rel="apple-touch-icon" href="/my_schedule/img/schedule_favicon.png">
+  
   <link rel="stylesheet" href="/my_schedule/css/reset.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
@@ -41,7 +40,6 @@
     authForm.submit();
     }
   }
-
   $(".authForm input").keyup(function(){
     var charLimit = $(this).attr("maxlength");
     
